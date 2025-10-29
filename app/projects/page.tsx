@@ -122,11 +122,11 @@ export default function Projects() {
           <div className="flex items-center justify-between">
             <h1 className="underline underline-offset-[3px] font-extralight">◆ Projects</h1>
             <div className="flex items-center gap-2 font-extralight">
-              <a href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</a>
+              <Link href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <a href="/about" className={`hover-underline-nudge ${shouldBounce('about') ? 'nav-bounce-delayed-1' : ''}`}>About me</a>
+              <Link href="/about" className={`hover-underline-nudge ${shouldBounce('about') ? 'nav-bounce-delayed-1' : ''}`}>About me</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <a href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</a>
+              <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</Link>
             </div>
           </div>
           <div>↳ A collection of projects I've built.</div>
@@ -231,9 +231,9 @@ export default function Projects() {
 
         {/* Back to Home */}
         <div className="text-sm sm:text-[0.95rem] leading-tight my-6">
-          <a href="/" className="hover-underline-nudge font-extralight">
+          <Link href="/" className="hover-underline-nudge font-extralight">
             ← Back to home
-          </a>
+          </Link>
         </div>
 
         <div className="my-6 border-t border-neutral-200 dark:border-neutral-700" />

@@ -51,11 +51,11 @@ export default function Photography() {
           <div className="flex items-center justify-between">
             <h1 className="underline underline-offset-[3px] font-extralight">◆ Photography</h1>
             <div className="flex items-center gap-2 font-extralight">
-              <a href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</a>
+              <Link href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <a href="/projects" className={`hover-underline-nudge ${shouldBounce('projects') ? 'nav-bounce-delayed-1' : ''}`}>Projects</a>
+              <Link href="/projects" className={`hover-underline-nudge ${shouldBounce('projects') ? 'nav-bounce-delayed-1' : ''}`}>Projects</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <a href="/about" className={`hover-underline-nudge ${shouldBounce('about') ? 'nav-bounce-delayed-2' : ''}`}>About me</a>
+              <Link href="/about" className={`hover-underline-nudge ${shouldBounce('about') ? 'nav-bounce-delayed-2' : ''}`}>About me</Link>
             </div>
           </div>
           <div>↳ A collection of my favorite photos.</div>
@@ -153,9 +153,9 @@ export default function Photography() {
 
         {/* Back to Home */}
         <div className="text-sm sm:text-[0.95rem] leading-tight my-6">
-          <a href="/" className="hover-underline-nudge font-extralight">
+          <Link href="/" className="hover-underline-nudge font-extralight">
             ← Back to home
-          </a>
+          </Link>
         </div>
 
         <div className="my-6 border-t border-neutral-200 dark:border-neutral-700" />

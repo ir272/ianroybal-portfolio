@@ -44,11 +44,11 @@ export default function About() {
           <div className="flex items-center justify-between">
             <h1 className="underline underline-offset-[3px] font-extralight">◆ Lance Yan</h1>
             <div className="flex items-center gap-2 font-extralight">
-              <a href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</a>
+              <Link href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <a href="/projects" className={`hover-underline-nudge ${shouldBounce('projects') ? 'nav-bounce-delayed-1' : ''}`}>Projects</a>
+              <Link href="/projects" className={`hover-underline-nudge ${shouldBounce('projects') ? 'nav-bounce-delayed-1' : ''}`}>Projects</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <a href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</a>
+              <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</Link>
             </div>
           </div>
           <div>↳ Based in <span className="inline-flex items-center align-middle gap-1"><Logo src="/ontario flag.png" alt="Ontario" /><Label>Waterloo</Label></span>, but also live in <span className="inline-flex items-center align-middle gap-1"><Logo src="/bc flag.png" alt="BC" /><Label>Vancouver</Label></span>, <span className="inline-flex items-center align-middle gap-1"><Logo src="/ontario flag.png" alt="Ontario" /><Label>Toronto</Label></span> and <span className="inline-flex items-center align-middle gap-1"><Logo src="/cali flag.png" alt="California" /><Label>San Francisco</Label></span>.</div>
@@ -58,7 +58,7 @@ export default function About() {
           <div>↳ Played the Cello since I was 6 years old.</div>
           <div className="ml-4">↳ Played for the <span className="inline-flex items-center align-middle gap-1"><Logo src="/vyso-favicon.png" alt="VYSO" /><Label><a href="https://vyso.com/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Vancouver Youth Symphony Orchestra</a></Label></span> and was the Principal Cellist of the <span className="inline-flex items-center align-middle gap-1"><Logo src="/vam.jpg" alt="VAM" /><Label><a href="https://vancouveracademyofmusic.com/events/vamso-orpheum-series/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Vancouver Academy of Music Symphony Orchestra</a></Label></span>.</div>
           <div className="ml-4">↳ Performed at: The Vancouver <span className="inline-flex items-center align-middle gap-1"><Logo src="/vancouver_civic_theatres_logo.jpeg" alt="VCT" /><Label><a href="https://vancouvercivictheatres.com/venues/orpheum/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Orpheum</a></Label></span>, the <span className="inline-flex items-center align-middle gap-1"><Logo src="/ubc-logo-edited.jpg" alt="UBC" /><Label><a href="https://www.ubc.ca/" target="_blank" rel="noreferrer" className="hover-underline-nudge">University of British Columbia</a></Label></span>, <span className="inline-flex items-center align-middle gap-1"><Logo src="/capU.jpg" alt="CapU" /><Label><a href="https://www.capilanou.ca/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Capilano University</a></Label></span> and various churches around Vancouver.</div>
-          <div>↳ My favorite hobby is 📷 <a href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce' : ''}`}>photography</a> and my favorite sport is <span className="inline-flex items-center align-middle gap-1"><Logo src="/badminton.png" alt="Badminton" /><Label>badminton.</Label></span></div>
+          <div>↳ My favorite hobby is 📷 <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce' : ''}`}>photography</Link> and my favorite sport is <span className="inline-flex items-center align-middle gap-1"><Logo src="/badminton.png" alt="Badminton" /><Label>badminton.</Label></span></div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
