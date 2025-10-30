@@ -51,7 +51,7 @@ export default function Home() {
               <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</Link>
             </div>
           </div>
-          <div>↳ ECE @ <span className="font-bold slight-italic">UT Austin</span>, graduating 2028</div>
+          <div>↳ ECE @ <Logo src="/ut.png" alt="UT Austin" /> <span className="font-bold slight-italic">UT Austin</span>, graduating 2028</div>
           <div>↳ Based in Austin, Texas</div>
         </div>
 
@@ -60,9 +60,9 @@ export default function Home() {
         {/* Experience */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Experience:</div>
-          <div>↳ Software Engineer Intern at <span className="font-bold slight-italic">Toffee.ai</span></div>
+          <div>↳ Software Engineer Intern at <Logo src="/toffee.png" alt="Toffee.ai" /> <span className="font-bold slight-italic">Toffee.ai</span></div>
           <div className="ml-4">↳ Scaled to <span className="font-bold slight-italic">$20k/month</span> revenue</div>
-          <div>↳ Founded <span className="font-bold slight-italic">Lightbulb Tutoring</span></div>
+          <div>↳ Founded <Logo src="/lbt.png" alt="Lightbulb Tutoring" /> <span className="font-bold slight-italic">Lightbulb Tutoring</span></div>
           <div className="ml-4">↳ Raised <span className="font-bold slight-italic">$75k</span> for impoverished school districts</div>
         </div>
 

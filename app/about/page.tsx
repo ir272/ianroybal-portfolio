@@ -51,7 +51,7 @@ export default function About() {
               <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</Link>
             </div>
           </div>
-          <div>↳ Based in <span className="font-bold slight-italic">Austin, Texas</span></div>
+          <div>↳ Based in <Logo src="/texas.png" alt="Texas" /> <span className="font-bold slight-italic">Austin, Texas</span></div>
           <div>↳ Studying <span className="font-bold slight-italic">ECE</span> at <span className="font-bold slight-italic">UT Austin</span>, graduating 2028</div>
           <div>↳ Play <span className="font-bold slight-italic">Piano</span> and <span className="font-bold slight-italic">Violin</span></div>
           <div>↳ My favorite sports are <span className="font-bold slight-italic">Tennis</span> (Nadal GOAT) and <span className="font-bold slight-italic">Basketball</span></div>
