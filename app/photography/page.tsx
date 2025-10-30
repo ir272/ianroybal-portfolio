@@ -48,8 +48,6 @@ export default function Photography() {
               <Link href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
               <Link href="/projects" className={`hover-underline-nudge ${shouldBounce('projects') ? 'nav-bounce-delayed-1' : ''}`}>Projects</Link>
-              <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <Link href="/about" className={`hover-underline-nudge ${shouldBounce('about') ? 'nav-bounce-delayed-2' : ''}`}>About me</Link>
             </div>
           </div>
           <div>↳ Photos coming soon!</div>

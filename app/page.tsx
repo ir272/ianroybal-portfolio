@@ -46,9 +46,7 @@ export default function Home() {
             <div className="flex items-center gap-2 font-extralight">
               <Link href="/projects" className={`hover-underline-nudge ${shouldBounce('projects') ? 'nav-bounce' : ''}`}>Projects</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <Link href="/about" className={`hover-underline-nudge ${shouldBounce('about') ? 'nav-bounce-delayed-1' : ''}`}>About me</Link>
-              <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</Link>
+              <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-1' : ''}`}>Photos</Link>
             </div>
           </div>
           <div>↳ ECE <Logo src="/ut.png" alt="UT Austin" /> <span className="font-bold slight-italic">UT Austin</span></div>
