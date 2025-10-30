@@ -49,7 +49,7 @@ export default function Home() {
               <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-1' : ''}`}>Photos</Link>
             </div>
           </div>
-          <div>↳ ECE <Logo src="/ut.png" alt="UT Austin" /> <span className="font-bold slight-italic">UT Austin</span></div>
+          <div>↳ ECE <Logo src="/ut.png" alt="UT Austin" /> <a href="https://www.utexas.edu/" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Austin</a></div>
           <div>↳ Based in Austin, Texas <Logo src="/texas.png" alt="Austin,Texas" /></div>
         </div>
 
