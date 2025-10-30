@@ -51,8 +51,8 @@ export default function Home() {
               <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</Link>
             </div>
           </div>
-          <div>↳ ECE @ <Logo src="/ut.png" alt="UT Austin" /> <span className="font-bold slight-italic">UT Austin</span>, graduating 2028</div>
-          <div>↳ Based in Austin, Texas</div>
+          <div>↳ ECE <Logo src="/ut.png" alt="UT Austin" /> <span className="font-bold slight-italic">UT Austin</span></div>
+          <div>↳ Based in Austin, Texas <Logo src="/texas.png" alt="Austin,Texas" /></div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
@@ -71,9 +71,9 @@ export default function Home() {
         {/* Interests */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Interests:</div>
-          <div>↳ Musical instruments: <span className="font-bold slight-italic">Piano</span> & <span className="font-bold slight-italic">Violin</span></div>
-          <div>↳ Sports: <span className="font-bold slight-italic">Tennis</span> (Nadal GOAT) & <span className="font-bold slight-italic">Basketball</span></div>
-          <div>↳ <span className="font-bold slight-italic">Poker</span> Enthusiast</div>
+          <div>↳ Music: <span className="font-bold slight-italic">Piano</span> 🎹 + <span className="font-bold slight-italic">Violin</span> 🎻</div>
+          <div>↳ Sports: <span className="font-bold slight-italic">Tennis</span> 🎾 (Nadal 🐐) + <span className="font-bold slight-italic">Basketball</span> 🏀</div>
+          <div>↳ Other: <span className="font-bold slight-italic">Poker</span> ♦️</div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
