@@ -1,3 +1,64 @@
+# Photography Dynamic Route Backup
+
+This file contains the backup code for the photography detail page route.
+When you're ready to add photos, recreate the `/app/photography/[id]` directory with these two files.
+
+## How to Restore
+
+1. Create directory: `mkdir -p app/photography/[id]`
+2. Create `app/photography/[id]/page.tsx` with the code below
+3. Create `app/photography/[id]/photo-page-client.tsx` with the code below
+4. Add photo entries to `/lib/photo-data.ts`
+
+## File: app/photography/[id]/page.tsx
+
+```tsx
+import { notFound } from "next/navigation";
+import { PhotoPageClient } from "./photo-page-client";
+import { photoEntries } from "@/lib/photo-data";
+
+export type PhotoData = (typeof photoEntries)[number];
+
+const photoMap = photoEntries.reduce<Record<string, PhotoData>>((acc, entry) => {
+  acc[entry.id] = entry;
+  return acc;
+}, {});
+
+interface PhotoPageProps {
+  params: {
+    id: string;
+  };
+}
+
+export async function generateStaticParams() {
+  return photoEntries.map((photo) => ({
+    id: photo.id,
+  }));
+}
+
+export const dynamicParams = false;
+
+export default function PhotoPage({ params }: PhotoPageProps) {
+  const photoData = photoMap[params.id];
+
+  if (!photoData) {
+    notFound();
+  }
+
+  const photoIndex = photoEntries.findIndex((entry) => entry.id === params.id) + 1;
+
+  return (
+    <PhotoPageClient
+      photoData={photoData}
+      photoIndex={photoIndex}
+    />
+  );
+}
+```
+
+## File: app/photography/[id]/photo-page-client.tsx
+
+```tsx
 'use client';
 
 import Image from "next/image";
@@ -70,3 +131,10 @@ export function PhotoPageClient({ photoData, photoIndex }: PhotoPageClientProps)
     </main>
   );
 }
+```
+
+## Notes
+
+- The dynamic route was removed because Next.js static export (`output: 'export'`) requires all dynamic routes to have pre-generated static params
+- Since `photoEntries` was empty, the build would fail
+- When you add photos to `/lib/photo-data.ts`, restore these files and the build will work properly
