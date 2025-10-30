@@ -78,8 +78,8 @@ export default function Home() {
 
         {/* Reach out */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
-          <div>◆ Feel free to reach out!</div>
-          <div>↳ Always happy to connect and chat.</div>
+          <div>◆ Reach out if you are:</div>
+          <div>↳ Curious about me or my work.</div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
