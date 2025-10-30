@@ -46,13 +46,11 @@ export default function Home() {
             <div className="flex items-center gap-2 font-extralight">
               <Link href="/projects" className={`hover-underline-nudge ${shouldBounce('projects') ? 'nav-bounce' : ''}`}>Projects</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <Link href="/about" className={`hover-underline-nudge ${shouldBounce('about') ? 'nav-bounce-delayed-1' : ''}`}>About me</Link>
-              <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</Link>
+              <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-1' : ''}`}>Photos</Link>
             </div>
           </div>
-          <div>↳ ECE @ <span className="font-bold slight-italic">UT Austin</span>, graduating 2028</div>
-          <div>↳ Based in Austin, Texas</div>
+          <div>↳ ECE <Logo src="/ut.png" alt="UT Austin" /> <span className="font-bold slight-italic">UT Austin</span></div>
+          <div>↳ Based in Austin, Texas <Logo src="/texas.png" alt="Austin,Texas" /></div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
@@ -60,9 +58,9 @@ export default function Home() {
         {/* Experience */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Experience:</div>
-          <div>↳ Software Engineer Intern at <span className="font-bold slight-italic">Toffee.ai</span></div>
+          <div>↳ Software Engineer Intern at <Logo src="/toffee.png" alt="Toffee.ai" /> Toffee.ai</div>
           <div className="ml-4">↳ Scaled to <span className="font-bold slight-italic">$20k/month</span> revenue</div>
-          <div>↳ Founded <span className="font-bold slight-italic">Lightbulb Tutoring</span></div>
+          <div>↳ Founded <Logo src="/lbt.png" alt="Lightbulb Tutoring" /> Lightbulb Tutoring</div>
           <div className="ml-4">↳ Raised <span className="font-bold slight-italic">$75k</span> for impoverished school districts</div>
         </div>
 
@@ -71,17 +69,17 @@ export default function Home() {
         {/* Interests */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Interests:</div>
-          <div>↳ Musical instruments: <span className="font-bold slight-italic">Piano</span> & <span className="font-bold slight-italic">Violin</span></div>
-          <div>↳ Sports: <span className="font-bold slight-italic">Tennis</span> (Nadal GOAT) & <span className="font-bold slight-italic">Basketball</span></div>
-          <div>↳ <span className="font-bold slight-italic">Poker</span> Enthusiast</div>
+          <div>↳ Music: Piano 🎹 + Violin 🎻</div>
+          <div>↳ Sports: Tennis 🎾 (Nadal 🐐) + Basketball 🏀</div>
+          <div>↳ Other: Poker ♦️</div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
 
         {/* Reach out */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
-          <div>◆ Feel free to reach out!</div>
-          <div>↳ Always happy to connect and chat.</div>
+          <div>◆ Reach out if you are:</div>
+          <div>↳ Curious about me or my work.</div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
@@ -96,8 +94,8 @@ export default function Home() {
                 <div className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300">
                   <a className="inline-flex items-center gap-1" href="mailto:ian.roybal@gmail.com"><Mail size={14} /><span className="hover-underline-nudge">Email</span></a>
                   <a className="inline-flex items-center gap-1" href="https://github.com/ir272" target="_blank" rel="noreferrer"><Github size={14} /><span className="hover-underline-nudge">GitHub</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://x.com/TornadoKing111/" target="_blank" rel="noreferrer"><Logo src="/X.png" alt="X" /><span className="hover-underline-nudge">Twitter</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://www.linkedin.com/in/ianroybal/" target="_blank" rel="noreferrer"><Logo src="/linkedin.webp" alt="LinkedIn" /><span className="hover-underline-nudge">LinkedIn</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://x.com/TornadoKing111/" target="_blank" rel="noreferrer"><Twitter size={14} /><span className="hover-underline-nudge">Twitter</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://www.linkedin.com/in/ianroybal/" target="_blank" rel="noreferrer"><Linkedin size={14} /><span className="hover-underline-nudge">LinkedIn</span></a>
                 </div>
               </div>
               <ThemeToggle />
