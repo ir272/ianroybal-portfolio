@@ -58,10 +58,10 @@ export default function Home() {
         {/* Experience */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Experience:</div>
-          <div>↳ Software Engineer Intern at <Logo src="/toffee.png" alt="Toffee.ai" /> Toffee.ai</div>
+          <div>↳ Software Engineer Intern at <Logo src="/toffee.png" alt="Toffee.ai" /> <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a></div>
           <div className="ml-4">↳ Scaled to <span className="font-bold slight-italic">$20k/month</span> revenue</div>
-          <div>↳ Founded <Logo src="/lbt.png" alt="Lightbulb Tutoring" /> Lightbulb Tutoring</div>
-          <div className="ml-4">↳ Raised <span className="font-bold slight-italic">$75k</span> for impoverished school districts</div>
+          <div>↳ Founded <Logo src="/lbt.png" alt="Lightbulb Tutoring" /> <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Lightbulb Tutoring</a></div>
+          <div className="ml-4">↳ Raised <span className="font-bold slight-italic">$75k</span> for <a href="https://www.youtube.com/watch?v=R3s4H16X9VA" target="_blank" rel="noreferrer" className="hover-underline-nudge">impoverished school districts</a></div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
@@ -71,7 +71,7 @@ export default function Home() {
           <div>◆ Interests:</div>
           <div>↳ Music: Piano 🎹 + Violin 🎻</div>
           <div>↳ Sports: Tennis 🎾 (Nadal 🐐) + Basketball 🏀</div>
-          <div>↳ Other: Poker ♦️</div>
+          <div>↳ Other: Poker ♦️ (Founded <a href="https://discord.gg/GKhA7YW3cH" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Poker Club</a>)</div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
