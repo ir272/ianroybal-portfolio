@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is Lance's personal portfolio website built with Next.js 14 (App Router), TypeScript, and Tailwind CSS. The site features a custom WebGL fluid dynamics cursor effect and a dark/light theme system.
+This is Ian's personal portfolio website built with Next.js 14 (App Router), TypeScript, and Tailwind CSS. The site features a custom WebGL fluid dynamics cursor effect and a dark/light theme system.
 
 ## Development Commands
 
