@@ -15,8 +15,10 @@ interface PhotoPageProps {
   };
 }
 
-export function generateStaticParams() {
-  return [];
+export async function generateStaticParams() {
+  return photoEntries.map((photo) => ({
+    id: photo.id,
+  }));
 }
 
 export const dynamicParams = false;
