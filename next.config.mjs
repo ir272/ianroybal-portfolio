@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || process.env.NEXT_BASE_PATH || "";
+const normalizedBasePath = basePath.startsWith("/") ? basePath : basePath ? `/${basePath}` : "";
+const assetPrefix = normalizedBasePath ? `${normalizedBasePath}/` : undefined;
 
 const nextConfig = {
   output: 'export',
@@ -7,8 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: isProd ? '/ianroybal-portfolio/' : undefined,
-  basePath: isProd ? '/ianroybal-portfolio' : undefined,
+  assetPrefix,
+  basePath: normalizedBasePath || undefined,
 };
 
 export default nextConfig;
