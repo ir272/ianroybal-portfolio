@@ -19,7 +19,10 @@ import {
   SiWebgl,
   SiJavascript,
   SiSupabase,
-  SiVite
+  SiVite,
+  SiFlask,
+  SiMapbox,
+  SiOpencv
 } from "react-icons/si";
 import { FaDatabase, FaChessKnight, FaGamepad } from "react-icons/fa";
 import { IconType } from "react-icons";
@@ -70,10 +73,31 @@ const techIcons: Record<string, { icon: IconType; color: string }> = {
   "Supabase": { icon: SiSupabase, color: "#3ECF8E" },
   "Vite": { icon: SiVite, color: "#646CFF" },
   "Pygame": { icon: FaGamepad, color: "#3776AB" },
-  "python-chess": { icon: FaChessKnight, color: "#000000" }
+  "python-chess": { icon: FaChessKnight, color: "#000000" },
+  "Flask": { icon: SiFlask, color: "#000000" },
+  "Mapbox GL JS": { icon: SiMapbox, color: "#000000" },
+  "OpenCV": { icon: SiOpencv, color: "#5C3EE8" }
 };
 
-const projects: Project[] = [];
+const projects: Project[] = [
+  {
+    id: "lumina",
+    name: "Lumina",
+    description: "Lumina finds you the perfect locations to stargaze mathematically.",
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Python", "Flask", "Mapbox GL JS"],
+    githubUrl: "https://github.com/HackTX-Project",
+    websiteUrl: "https://devpost.com/software/goat-anb0tv",
+    screenshot: "/lumina.png"
+  },
+  {
+    id: "cavex",
+    name: "Cavex",
+    description: "Cavex applies machine learning to dental X-rays to detect cavities and gum disease.",
+    techStack: ["React", "TypeScript", "Vite", "TensorFlow", "Python", "OpenCV"],
+    githubUrl: "https://github.com/ir272/Cavex",
+    screenshot: "/cavex.png"
+  }
+];
 
 export default function Projects() {
   const { shouldBounce } = useNavigationBounce('projects');
@@ -93,7 +117,7 @@ export default function Projects() {
               <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-1' : ''}`}>Photos</Link>
             </div>
           </div>
-          <div>↳ Projects coming soon!</div>
+          <div>↳ Projects</div>
         </div>
 
         <div className="my-6 border-t border-neutral-200 dark:border-neutral-700" />
