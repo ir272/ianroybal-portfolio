@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Mail, Github } from "lucide-react";
 import { useNavigationBounce } from "../../lib/useNavigationBounce";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { photoEntries } from "@/lib/photo-data";
 
 function Logo({ src, alt, size = 18, className = "" }: { src: string; alt: string; size?: number; className?: string }) {
   return (
@@ -24,7 +25,12 @@ function Logo({ src, alt, size = 18, className = "" }: { src: string; alt: strin
 }
 
 // Photography images with their actual dimensions
-const photographyImages: { filename: string; width: number; height: number }[] = [];
+const photographyImages = photoEntries.map(({ filename, width, height, id }) => ({
+  id,
+  filename,
+  width,
+  height,
+}));
 
 export default function Photography() {
   const { shouldBounce } = useNavigationBounce('photography');
@@ -58,7 +64,7 @@ export default function Photography() {
             {/* Left Column */}
             <div className="flex-1">
               {photographyImages.filter((_, index) => index % 2 === 0 && index < photographyImages.length - 1).map((image, index) => {
-                const photoId = image.filename.replace('.png', '');
+                const photoId = image.id;
                 const aspectRatio = image.width / image.height;
                 
                 return (
@@ -87,7 +93,7 @@ export default function Photography() {
             {/* Right Column */}
             <div className="flex-1">
               {photographyImages.filter((_, index) => index % 2 === 1 && index < photographyImages.length - 1).map((image, index) => {
-                const photoId = image.filename.replace('.png', '');
+                const photoId = image.id;
                 const aspectRatio = image.width / image.height;
                 
                 return (
@@ -116,8 +122,8 @@ export default function Photography() {
           
           {/* Last photo spanning both columns */}
           {photographyImages.length > 0 && (
-            <Link 
-              href={`/photography/${photographyImages[photographyImages.length - 1].filename.replace('.png', '')}`}
+            <Link
+              href={`/photography/${photographyImages[photographyImages.length - 1].id}`}
               className="cursor-pointer block"
             >
               <div className="relative overflow-hidden rounded-lg border border-neutral-200 photo-hover">
