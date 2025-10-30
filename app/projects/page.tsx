@@ -73,41 +73,7 @@ const techIcons: Record<string, { icon: IconType; color: string }> = {
   "python-chess": { icon: FaChessKnight, color: "#000000" }
 };
 
-const projects: Project[] = [
-  {
-    id: "ratemycompany",
-    name: "ratemycompany.ca",
-    description: "A matchup voting platform applying 'hot or not' concept to tech companies. Users vote on company comparisons with hCaptcha-secured API, session management, and real-time leaderboards. Reached 40K+ users and 2.5M+ votes within 48 hours of launch.",
-    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "Vercel"],
-    githubUrl: "https://github.com/lance116/ratemycompany",
-    websiteUrl: "https://www.ratemycompany.ca/",
-    screenshot: "/ratemycompany.png"
-  },
-  {
-    id: "chess-neural-network",
-    name: "Chess Neural Network",
-    description: "Interactive chess game with AI opponent powered by TensorFlow neural networks. Features complete rule validation (castling, en passant, promotion), move highlighting, and continuous improvement through self-play training mechanisms.",
-    techStack: ["Python", "TensorFlow", "NumPy", "Pygame", "python-chess"],
-    githubUrl: "https://github.com/lance116/Chess-Neural-Network",
-    screenshot: "/chessscreens.png"
-  },
-  {
-    id: "portfolio",
-    name: "Portfolio Website",
-    description: "My personal portfolio featuring a custom WebGL fluid dynamics cursor effect (took 3 hours to build!). Modern, responsive design built with Next.js 14 to showcase my projects and experience with smooth animations.",
-    techStack: ["Next.js 14", "TypeScript", "Tailwind CSS", "WebGL", "Vercel"],
-    githubUrl: "https://github.com/lance116/lances-portfolio",
-    screenshot: "/pic1.png"
-  },
-  {
-    id: "perica",
-    name: "Perica - Period Tracker",
-    description: "Privacy-focused menstrual cycle tracker with AI-powered health assistant. Features symptom and mood logging, pattern recognition, predictive capabilities, and health insights—all while keeping data secure and private.",
-    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase"],
-    githubUrl: "https://github.com/lance116/period-tracker",
-    screenshot: "/perica.png"
-  }
-];
+const projects: Project[] = [];
 
 export default function Projects() {
   const { shouldBounce } = useNavigationBounce('projects');
@@ -120,7 +86,7 @@ export default function Projects() {
         {/* Header */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div className="flex items-center justify-between">
-            <h1 className="underline underline-offset-[3px] font-extralight">◆ Projects</h1>
+            <h1 className="underline underline-offset-[3px] font-extralight">◆ Ian Roybal</h1>
             <div className="flex items-center gap-2 font-extralight">
               <Link href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
@@ -129,7 +95,7 @@ export default function Projects() {
               <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-2' : ''}`}>Photos</Link>
             </div>
           </div>
-          <div>↳ A collection of projects I've built.</div>
+          <div>↳ Projects coming soon!</div>
         </div>
 
         <div className="my-6 border-t border-neutral-200 dark:border-neutral-700" />
@@ -246,10 +212,10 @@ export default function Projects() {
               <div className="flex items-center gap-3">
                 <div>◆ Contact:</div>
                 <div className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300">
-                  <a className="inline-flex items-center gap-1" href="mailto:lance.yan.business@gmail.com"><Mail size={14} /><span className="hover-underline-nudge">Email</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://github.com/lance116" target="_blank" rel="noreferrer"><Github size={14} /><span className="hover-underline-nudge">GitHub</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://x.com/cnnguan/" target="_blank" rel="noreferrer"><Logo src="/X.png" alt="X" /><span className="hover-underline-nudge">Twitter</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://www.linkedin.com/in/lance-yan/" target="_blank" rel="noreferrer"><Logo src="/linkedin.webp" alt="LinkedIn" /><span className="hover-underline-nudge">LinkedIn</span></a>
+                  <a className="inline-flex items-center gap-1" href="mailto:ian.roybal@gmail.com"><Mail size={14} /><span className="hover-underline-nudge">Email</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://github.com/ir272" target="_blank" rel="noreferrer"><Github size={14} /><span className="hover-underline-nudge">GitHub</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://x.com/TornadoKing111/" target="_blank" rel="noreferrer"><Logo src="/X.png" alt="X" /><span className="hover-underline-nudge">Twitter</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://www.linkedin.com/in/ianroybal/" target="_blank" rel="noreferrer"><Logo src="/linkedin.webp" alt="LinkedIn" /><span className="hover-underline-nudge">LinkedIn</span></a>
                 </div>
               </div>
               <ThemeToggle />

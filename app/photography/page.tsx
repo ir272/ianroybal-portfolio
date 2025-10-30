@@ -24,19 +24,7 @@ function Logo({ src, alt, size = 18, className = "" }: { src: string; alt: strin
 }
 
 // Photography images with their actual dimensions
-const photographyImages = [
-  { filename: "pic1.png", width: 1530, height: 1018 },
-  { filename: "pic2.png", width: 1526, height: 1014 },
-  { filename: "pic4.png", width: 1416, height: 1016 },
-  { filename: "pic5.png", width: 1534, height: 1018 },
-  { filename: "pic6.png", width: 1532, height: 1018 },
-  { filename: "pic7.png", width: 1242, height: 1016 },
-  { filename: "pic8.png", width: 1530, height: 1022 },
-  { filename: "pic9.png", width: 1526, height: 1014 },
-  { filename: "pic10.png", width: 706, height: 1018 },
-  { filename: "pic11.png", width: 672, height: 1014 },
-  { filename: "pic3.png", width: 2074, height: 1020 } // Moved to bottom as the wide photo
-];
+const photographyImages: { filename: string; width: number; height: number }[] = [];
 
 export default function Photography() {
   const { shouldBounce } = useNavigationBounce('photography');
@@ -49,7 +37,7 @@ export default function Photography() {
         {/* Header */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div className="flex items-center justify-between">
-            <h1 className="underline underline-offset-[3px] font-extralight">◆ Photography</h1>
+            <h1 className="underline underline-offset-[3px] font-extralight">◆ Ian Roybal</h1>
             <div className="flex items-center gap-2 font-extralight">
               <Link href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</Link>
               <span className="text-neutral-400 dark:text-neutral-600">|</span>
@@ -58,8 +46,7 @@ export default function Photography() {
               <Link href="/about" className={`hover-underline-nudge ${shouldBounce('about') ? 'nav-bounce-delayed-2' : ''}`}>About me</Link>
             </div>
           </div>
-          <div>↳ A collection of my favorite photos.</div>
-          <div className="ml-4">↳ Try clicking on one of them!</div>
+          <div>↳ Photos coming soon!</div>
         </div>
 
         <div className="my-6 border-t border-neutral-200 dark:border-neutral-700" />
@@ -168,10 +155,10 @@ export default function Photography() {
               <div className="flex items-center gap-3">
                 <div>◆ Contact:</div>
                 <div className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300">
-                  <a className="inline-flex items-center gap-1" href="mailto:lance.yan.business@gmail.com"><Mail size={14} /><span className="hover-underline-nudge">Email</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://github.com/lance116" target="_blank" rel="noreferrer"><Github size={14} /><span className="hover-underline-nudge">GitHub</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://x.com/cnnguan/" target="_blank" rel="noreferrer"><Logo src="/X.png" alt="X" /><span className="hover-underline-nudge">Twitter</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://www.linkedin.com/in/lance-yan/" target="_blank" rel="noreferrer"><Logo src="/linkedin.webp" alt="LinkedIn" /><span className="hover-underline-nudge">LinkedIn</span></a>
+                  <a className="inline-flex items-center gap-1" href="mailto:ian.roybal@gmail.com"><Mail size={14} /><span className="hover-underline-nudge">Email</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://github.com/ir272" target="_blank" rel="noreferrer"><Github size={14} /><span className="hover-underline-nudge">GitHub</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://x.com/TornadoKing111/" target="_blank" rel="noreferrer"><Logo src="/X.png" alt="X" /><span className="hover-underline-nudge">Twitter</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://www.linkedin.com/in/ianroybal/" target="_blank" rel="noreferrer"><Logo src="/linkedin.webp" alt="LinkedIn" /><span className="hover-underline-nudge">LinkedIn</span></a>
                 </div>
               </div>
               <ThemeToggle />
