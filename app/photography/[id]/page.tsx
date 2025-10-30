@@ -15,8 +15,8 @@ interface PhotoPageProps {
   };
 }
 
-export async function generateStaticParams(): Promise<Array<{ id: string }>> {
-  return photoEntries.map(({ id }) => ({ id }));
+export function generateStaticParams() {
+  return [];
 }
 
 export const dynamicParams = false;
