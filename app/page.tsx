@@ -60,9 +60,9 @@ export default function Home() {
         {/* Experience */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Experience:</div>
-          <div>↳ Software Engineer Intern at <Logo src="/toffee.png" alt="Toffee.ai" /> <span className="font-bold slight-italic">Toffee.ai</span></div>
+          <div>↳ Software Engineer Intern at <Logo src="/toffee.png" alt="Toffee.ai" /> Toffee.ai</div>
           <div className="ml-4">↳ Scaled to <span className="font-bold slight-italic">$20k/month</span> revenue</div>
-          <div>↳ Founded <Logo src="/lbt.png" alt="Lightbulb Tutoring" /> <span className="font-bold slight-italic">Lightbulb Tutoring</span></div>
+          <div>↳ Founded <Logo src="/lbt.png" alt="Lightbulb Tutoring" /> Lightbulb Tutoring</div>
           <div className="ml-4">↳ Raised <span className="font-bold slight-italic">$75k</span> for impoverished school districts</div>
         </div>
 
@@ -71,9 +71,9 @@ export default function Home() {
         {/* Interests */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Interests:</div>
-          <div>↳ Music: <span className="font-bold slight-italic">Piano</span> 🎹 + <span className="font-bold slight-italic">Violin</span> 🎻</div>
-          <div>↳ Sports: <span className="font-bold slight-italic">Tennis</span> 🎾 (Nadal 🐐) + <span className="font-bold slight-italic">Basketball</span> 🏀</div>
-          <div>↳ Other: <span className="font-bold slight-italic">Poker</span> ♦️</div>
+          <div>↳ Music: Piano 🎹 + Violin 🎻</div>
+          <div>↳ Sports: Tennis 🎾 (Nadal 🐐) + Basketball 🏀</div>
+          <div>↳ Other: Poker ♦️</div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
@@ -96,8 +96,8 @@ export default function Home() {
                 <div className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300">
                   <a className="inline-flex items-center gap-1" href="mailto:ian.roybal@gmail.com"><Mail size={14} /><span className="hover-underline-nudge">Email</span></a>
                   <a className="inline-flex items-center gap-1" href="https://github.com/ir272" target="_blank" rel="noreferrer"><Github size={14} /><span className="hover-underline-nudge">GitHub</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://x.com/TornadoKing111/" target="_blank" rel="noreferrer"><Logo src="/X.png" alt="X" /><span className="hover-underline-nudge">Twitter</span></a>
-                  <a className="inline-flex items-center gap-1" href="https://www.linkedin.com/in/ianroybal/" target="_blank" rel="noreferrer"><Logo src="/linkedin.webp" alt="LinkedIn" /><span className="hover-underline-nudge">LinkedIn</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://x.com/TornadoKing111/" target="_blank" rel="noreferrer"><Twitter size={14} /><span className="hover-underline-nudge">Twitter</span></a>
+                  <a className="inline-flex items-center gap-1" href="https://www.linkedin.com/in/ianroybal/" target="_blank" rel="noreferrer"><Linkedin size={14} /><span className="hover-underline-nudge">LinkedIn</span></a>
                 </div>
               </div>
               <ThemeToggle />
