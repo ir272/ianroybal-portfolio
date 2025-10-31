@@ -49,8 +49,8 @@ export default function Home() {
               <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-1' : ''}`}>Photos</Link>
             </div>
           </div>
-          <div>↳ ECE <a href="https://www.utexas.edu/" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Austin</a> <Logo src="/ut.png" alt="UT Austin" /></div>
-          <div>↳ Based in Austin, Texas <Logo src="/texas.png" alt="Austin,Texas" /></div>
+          <div>↳ ECE <Logo src="/ut.png" alt="UT Austin" /> <a href="https://www.utexas.edu/" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Austin</a></div>
+          <div>↳ Based in Allen, Texas <Logo src="/texas.png" alt="Austin,Texas" /></div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
@@ -59,7 +59,7 @@ export default function Home() {
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Experience:</div>
           <div>↳ Software Engineer Intern at <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a> <Logo src="/toffee.png" alt="Toffee.ai" /></div>
-          <div className="ml-4">↳ Scaled to <span className="font-bold slight-italic">$20k/month</span> revenue</div>
+          <div className="ml-4">↳ Scaled to <span className="font-bold slight-italic">$40k/month</span> revenue</div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
@@ -71,7 +71,7 @@ export default function Home() {
           <div className="ml-4">↳ Raised <span className="font-bold slight-italic">$75k</span> for <a href="https://www.youtube.com/watch?v=R3s4H16X9VA" target="_blank" rel="noreferrer" className="hover-underline-nudge">impoverished school districts</a></div>
           <div>↳ AIME Qualifier <Logo src="/AIME.png" alt="AIME" /></div>
           <div>↳ USA Physics Olympiad Semi-Finalist <Logo src="/USAPHO.png" alt="USAPHO" /></div>
-          <div>↳ 🥇 USACO Gold Division <Logo src="/USACO.png" alt="USACO" /></div>
+          <div>↳ USACO Gold Division <Logo src="/USACO.png" alt="USACO" /></div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
