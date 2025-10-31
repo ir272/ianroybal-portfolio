@@ -50,7 +50,7 @@ export default function Home() {
             </div>
           </div>
           <div>↳ ECE <Logo src="/ut.png" alt="UT Austin" /> <a href="https://www.utexas.edu/" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Austin</a></div>
-          <div>↳ Based in Austin, Texas <Logo src="/texas.png" alt="Austin,Texas" /></div>
+          <div>↳ Based in Allen, Texas <Logo src="/texas.png" alt="Austin,Texas" /></div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
@@ -58,10 +58,20 @@ export default function Home() {
         {/* Experience */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Experience:</div>
-          <div>↳ Software Engineer Intern at <Logo src="/toffee.png" alt="Toffee.ai" /> <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a></div>
-          <div className="ml-4">↳ Scaled to <span className="font-bold slight-italic">$20k/month</span> revenue</div>
-          <div>↳ Founded <Logo src="/lbt.png" alt="Lightbulb Tutoring" /> <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Lightbulb Tutoring</a></div>
+          <div>↳ Software Engineer Intern at <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a> <Logo src="/toffee.png" alt="Toffee.ai" /></div>
+          <div className="ml-4">↳ Scaled to <span className="font-bold slight-italic">$40k/month</span> revenue</div>
+        </div>
+
+        <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
+
+        {/* Accomplishments */}
+        <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
+          <div>◆ Accomplishments:</div>
+          <div>↳ Founded <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Lightbulb Tutoring</a> <Logo src="/lbt.png" alt="Lightbulb Tutoring" /></div>
           <div className="ml-4">↳ Raised <span className="font-bold slight-italic">$75k</span> for <a href="https://www.youtube.com/watch?v=R3s4H16X9VA" target="_blank" rel="noreferrer" className="hover-underline-nudge">impoverished school districts</a></div>
+          <div>↳ AIME Qualifier <Logo src="/AIME.png" alt="AIME" /></div>
+          <div>↳ USA Physics Olympiad Semi-Finalist <Logo src="/USAPHO.png" alt="USAPHO" /></div>
+          <div>↳ USACO Gold Division <Logo src="/USACO.png" alt="USACO" /></div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />

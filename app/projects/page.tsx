@@ -24,7 +24,7 @@ import {
   SiMapbox,
   SiOpencv
 } from "react-icons/si";
-import { FaDatabase, FaChessKnight, FaGamepad } from "react-icons/fa";
+import { FaDatabase, FaChessKnight, FaGamepad, FaMusic } from "react-icons/fa";
 import { IconType } from "react-icons";
 
 function Logo({ src, alt, size = 18, className = "" }: { src: string; alt: string; size?: number; className?: string }) {
@@ -76,7 +76,8 @@ const techIcons: Record<string, { icon: IconType; color: string }> = {
   "python-chess": { icon: FaChessKnight, color: "#000000" },
   "Flask": { icon: SiFlask, color: "#000000" },
   "Mapbox GL JS": { icon: SiMapbox, color: "#000000" },
-  "OpenCV": { icon: SiOpencv, color: "#5C3EE8" }
+  "OpenCV": { icon: SiOpencv, color: "#5C3EE8" },
+  "MusicGPT": { icon: FaMusic, color: "#FF6B6B" }
 };
 
 const projects: Project[] = [
@@ -96,6 +97,14 @@ const projects: Project[] = [
     techStack: ["React", "TypeScript", "Vite", "TensorFlow", "Python", "OpenCV"],
     githubUrl: "https://github.com/ir272/Cavex",
     screenshot: "/cavex.png"
+  },
+  {
+    id: "playa",
+    name: "Playa",
+    description: "Upload/record a video and Playa will analyze your tone, emotion, and speech to generate a song that captures your story.",
+    techStack: ["React", "TypeScript", "Python", "Flask", "MusicGPT"],
+    githubUrl: "https://github.com/R0H1T-RAJU/Playa",
+    screenshot: "/playa.png"
   }
 ];
 
