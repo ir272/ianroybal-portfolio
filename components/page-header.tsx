@@ -27,7 +27,7 @@ export function PageHeader({ currentPage, subtitle }: PageHeaderProps) {
         {subtitle && <div>{subtitle}</div>}
       </div>
 
-      <div className="my-6 border-t border-neutral-200 dark:border-neutral-700" />
+      <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
     </>
   );
 }

@@ -45,8 +45,6 @@ export default function Home() {
           }
         />
 
-        <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
-
         {/* Experience */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Experience:</div>
