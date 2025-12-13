@@ -1,3 +1,5 @@
+import createMDX from '@next/mdx'
+
 /** @type {import('next').NextConfig} */
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || process.env.NEXT_BASE_PATH || "";
 const normalizedBasePath = basePath.startsWith("/") ? basePath : basePath ? `/${basePath}` : "";
@@ -11,6 +13,11 @@ const nextConfig = {
   },
   assetPrefix,
   basePath: normalizedBasePath || undefined,
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 };
 
-export default nextConfig;
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+})
+
+export default withMDX(nextConfig);
