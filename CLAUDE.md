@@ -72,12 +72,10 @@ All pages follow a consistent layout pattern:
 
 **Routes**:
 - `/` - Home page (`app/page.tsx`): Main bio, achievements, current projects
-- `/about` - About page (`app/about/page.tsx`): Personal background, hobbies, locations
-- `/photography` - Photo gallery (`app/photography/page.tsx`): Grid layout with hover effects
-- `/photography/[id]` - Individual photo view (`app/photography/[id]/page.tsx`): Full-size photo with caption
+- `/projects` - Projects page (`app/projects/page.tsx`): Portfolio projects with tech stack details
 
 **Common elements**:
-- Header with navigation (Home | About | Photos)
+- Header with navigation (Home | Projects)
 - Footer with contact links and theme toggle
 - Logo component for inline brand/company icons
 - Consistent typography and spacing
@@ -93,7 +91,6 @@ Built with Tailwind CSS using custom design tokens.
 **Custom utilities**:
 - `.hover-underline-nudge`: Animated underline with slight vertical nudge on hover
 - `.nav-bounce` / `.nav-bounce-delayed`: Gentle bounce animations
-- `.photo-hover`: Scale-up effect on photo thumbnails
 - `.slight-italic`: Subtle italic skew for emphasis
 
 **Typography**:
@@ -103,15 +100,9 @@ Built with Tailwind CSS using custom design tokens.
 
 ## Image Assets
 
-Photos are stored in `/public` directory with specific dimensions tracked in code:
-- Photography images: `pic1.png` through `pic11.png`
-- Logo images: Various company/organization logos (e.g., `clice final logo.png`, `waterloo-logo.png`, etc.)
-
-**Note**: When adding new photos to the gallery, update both:
-1. `photographyImages` array in `app/photography/page.tsx`
-2. `photoMap` object in `app/photography/[id]/page.tsx`
-
-Include exact dimensions and captions.
+Logo images and project screenshots are stored in `/public` directory:
+- Logo images: Various company/organization logos (e.g., `ut.png`, `toffee.png`, etc.)
+- Project screenshots: `lumina.png`, `cavex.png`, `playa.png`
 
 ## TypeScript Configuration
 

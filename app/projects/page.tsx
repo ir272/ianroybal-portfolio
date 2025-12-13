@@ -122,8 +122,6 @@ export default function Projects() {
             <h1 className="underline underline-offset-[3px] font-extralight">◆ Ian Roybal</h1>
             <div className="flex items-center gap-2 font-extralight">
               <Link href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</Link>
-              <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-1' : ''}`}>Photos</Link>
             </div>
           </div>
           <div>↳ Projects</div>

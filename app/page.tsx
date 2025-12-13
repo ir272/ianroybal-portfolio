@@ -45,8 +45,6 @@ export default function Home() {
             <h1 className="underline underline-offset-[3px] font-extralight">◆ Ian Roybal</h1>
             <div className="flex items-center gap-2 font-extralight">
               <Link href="/projects" className={`hover-underline-nudge ${shouldBounce('projects') ? 'nav-bounce' : ''}`}>Projects</Link>
-              <span className="text-neutral-400 dark:text-neutral-600">|</span>
-              <Link href="/photography" className={`hover-underline-nudge ${shouldBounce('photography') ? 'nav-bounce-delayed-1' : ''}`}>Photos</Link>
             </div>
           </div>
           <div>↳ ECE <Logo src="/ut.png" alt="UT Austin" /> <a href="https://www.utexas.edu/" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Austin</a></div>
