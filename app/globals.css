@@ -184,4 +184,139 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border-color: hsl(0 0% 30%);
   }
+
+  /* Prose styling for article content */
+  .prose {
+    max-width: 65ch;
+  }
+
+  .prose p {
+    margin-bottom: 1.25em;
+    line-height: 1.75;
+  }
+
+  .prose h1 {
+    font-size: 2em;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+  }
+
+  .prose h2 {
+    font-size: 1.5em;
+    font-weight: 200;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .prose h3 {
+    font-size: 1.25em;
+    font-weight: 200;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+  }
+
+  .prose h4 {
+    font-size: 1.1em;
+    font-weight: 200;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .prose a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--foreground) / 0.3);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.2s ease;
+  }
+
+  .prose a:hover {
+    text-decoration-color: hsl(var(--foreground));
+  }
+
+  .prose strong {
+    font-weight: 500;
+  }
+
+  .prose em {
+    font-style: italic;
+  }
+
+  .prose code {
+    background-color: hsl(var(--muted));
+    padding: 0.2em 0.4em;
+    border-radius: 0.25em;
+    font-size: 0.875em;
+    font-family: 'Courier New', monospace;
+  }
+
+  .prose pre {
+    background-color: hsl(var(--muted));
+    padding: 1em;
+    border-radius: 0.5em;
+    overflow-x: auto;
+    margin: 1.5em 0;
+  }
+
+  .prose pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.875em;
+  }
+
+  .prose ul,
+  .prose ol {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    padding-left: 1.625em;
+  }
+
+  .prose li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .prose ul > li {
+    list-style-type: disc;
+  }
+
+  .prose ol > li {
+    list-style-type: decimal;
+  }
+
+  .prose blockquote {
+    border-left: 3px solid hsl(var(--border));
+    padding-left: 1em;
+    margin: 1.5em 0;
+    font-style: italic;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .prose img {
+    margin: 2em 0;
+    border-radius: 0.5em;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .prose hr {
+    border: none;
+    border-top: 1px solid hsl(var(--border));
+    margin: 2em 0;
+  }
+
+  /* Dark mode prose adjustments */
+  .dark .prose {
+    color: hsl(var(--foreground));
+  }
+
+  .dark .prose code {
+    background-color: hsl(var(--muted));
+  }
+
+  .dark .prose pre {
+    background-color: hsl(var(--muted));
+  }
 }
