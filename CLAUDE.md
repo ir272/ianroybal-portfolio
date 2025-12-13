@@ -73,9 +73,11 @@ All pages follow a consistent layout pattern:
 **Routes**:
 - `/` - Home page (`app/page.tsx`): Main bio, achievements, current projects
 - `/projects` - Projects page (`app/projects/page.tsx`): Portfolio projects with tech stack details
+- `/writing` - Writing listing page (`app/writing/page.tsx`): List of all articles with titles and dates
+- `/writing/[slug]` - Individual article page (`app/writing/[slug]/page.tsx`): Full article content rendered from MDX
 
 **Common elements**:
-- Header with navigation (Home | Projects)
+- Header with navigation (Home | Projects | Writing)
 - Footer with contact links and theme toggle
 - Logo component for inline brand/company icons
 - Consistent typography and spacing
@@ -100,9 +102,20 @@ Built with Tailwind CSS using custom design tokens.
 
 ## Image Assets
 
-Logo images and project screenshots are stored in `/public` directory:
+Images are stored in `/public` directory:
 - Logo images: Various company/organization logos (e.g., `ut.png`, `toffee.png`, etc.)
 - Project screenshots: `lumina.png`, `cavex.png`, `playa.png`
+- Article images: `/public/writing/[article-slug]/` for images used in writing articles
+
+## Writing Content
+
+Articles are written in MDX format and stored in `_content/writing/`:
+- Each article is a `.mdx` file (e.g., `example-article.mdx`)
+- Frontmatter includes: `title`, `date`, `description`, and optional `tags`
+- Content uses Markdown syntax with full formatting support
+- Images referenced as `/writing/[article-slug]/image.png`
+- Utility functions in `lib/mdx-utils.ts` handle reading and parsing MDX files
+- Articles are statically generated at build time using `next-mdx-remote`
 
 ## TypeScript Configuration
 
