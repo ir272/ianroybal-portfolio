@@ -50,8 +50,7 @@ export default function Home() {
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ <span className="font-bold">Previously...</span></div>
           <div>↳ Engineering at <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a> <Logo src="/toffee.png" alt="Toffee.ai" /></div>
-          <div>↳ Founded <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Lightbulb Tutoring</a> <Logo src="/lbt.png" alt="Lightbulb Tutoring" /></div>
-          <div className="ml-4">↳ Raised $75k for <a href="https://www.youtube.com/watch?v=R3s4H16X9VA" target="_blank" rel="noreferrer" className="hover-underline-nudge">impoverished school districts</a></div>
+          <div>↳ Raised <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">$75k</a> for <a href="https://www.youtube.com/watch?v=R3s4H16X9VA" target="_blank" rel="noreferrer" className="hover-underline-nudge">impoverished school districts</a></div>
           <div>↳ Competed in AIME | USAPhO | USACO</div>
         </div>
 
