@@ -12,10 +12,14 @@ interface ArticleLayoutProps {
 
 export function ArticleLayout({ children, title, date }: ArticleLayoutProps) {
   // Format date from YYYY-MM-DD to "Month Day, Year"
-  const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  // Parse manually to avoid timezone issues
+  const [year, month, day] = date.split('-').map(Number);
+  const dateObj = new Date(year, month - 1, day);
+  const formattedDate = dateObj.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
+    timeZone: 'UTC'
   });
 
   return (
