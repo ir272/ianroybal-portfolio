@@ -49,9 +49,12 @@ export default function Home() {
         {/* Accomplishments */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ <span className="font-bold">Previously...</span></div>
+          <div>↳ Product at <a href="https://www.veevohealth.com/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Veevo Health</a> <Logo src="/veevohealth.svg" alt="Veevo Health" /></div>
+          <div>↳ Research at <a href="https://afarahi.github.io/" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Austin</a> <Logo src="/ut.png" alt="UT Austin" /></div>
           <div>↳ Engineering at <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a> <Logo src="/toffee.png" alt="Toffee.ai" /></div>
           <div>↳ Raised <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">$75k</a> for <a href="https://www.youtube.com/watch?v=R3s4H16X9VA" target="_blank" rel="noreferrer" className="hover-underline-nudge">impoverished school districts</a></div>
           <div>↳ Competed in AIME | USAPhO | USACO</div>
+          <div>↳ Built <a href="https://github.com/ir272/termshare" target="_blank" rel="noreferrer" className="hover-underline-nudge">TermShare</a>, <a href="https://github.com/ir272/Roybal" target="_blank" rel="noreferrer" className="hover-underline-nudge">Roybal</a>, <a href="https://github.com/ir272/ae-mcp" target="_blank" rel="noreferrer" className="hover-underline-nudge">Adobe After Effects MCP</a>, <a href="https://duels.live" target="_blank" rel="noreferrer" className="hover-underline-nudge">Duel</a>, and other <a href="https://github.com/ir272" target="_blank" rel="noreferrer" className="hover-underline-nudge">cool stuff</a></div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
@@ -59,7 +62,7 @@ export default function Home() {
         {/* Reach out */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ Reach out if you are:</div>
-          <div>↳ Curious about <a href="/writing" className="hover-underline-nudge">me</a> or my <a href="/projects" className="hover-underline-nudge">work</a>.</div>
+          <div>↳ Curious about <a href="/writing" className="hover-underline-nudge">me</a>.</div>
         </div>
 
         <div className="my-3 border-t border-neutral-200 dark:border-neutral-700" />
