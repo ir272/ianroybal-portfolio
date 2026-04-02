@@ -49,8 +49,8 @@ export default function Home() {
         {/* Accomplishments */}
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ <span className="font-bold">Previously...</span></div>
-          <div>↳ Product at <a href="https://www.veevohealth.com/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Veevo Health</a> <Logo src="/veevohealth.svg" alt="Veevo Health" /></div>
           <div>↳ Research at <a href="https://afarahi.github.io/" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Austin</a> <Logo src="/ut.png" alt="UT Austin" /></div>
+          <div>↳ Engineering at <a href="https://www.veevohealth.com/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Veevo Health</a> <Logo src="/veevohealth.svg" alt="Veevo Health" /></div>
           <div>↳ Engineering at <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a> <Logo src="/toffee.png" alt="Toffee.ai" /></div>
           <div>↳ Raised <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">$75k</a> for <a href="https://www.youtube.com/watch?v=R3s4H16X9VA" target="_blank" rel="noreferrer" className="hover-underline-nudge">impoverished school districts</a></div>
           <div>↳ Competed in AIME | USAPhO | USACO</div>
