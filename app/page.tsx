@@ -50,9 +50,10 @@ export default function Home() {
         <div className="text-sm sm:text-[0.95rem] leading-tight space-y-2">
           <div>◆ <span className="font-bold">Previously...</span></div>
           <div>↳ Research at <a href="https://afarahi.github.io/" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Austin</a> <Logo src="/ut.png" alt="UT Austin" /></div>
+          <div>↳ Research at <a href="https://www.ieee.org/" target="_blank" rel="noreferrer" className="hover-underline-nudge">IEEE</a> <Logo src="/ieee.png?v=2" alt="IEEE" className="h-[24px] w-[24px]" /></div>
           <div>↳ Engineering at <a href="https://www.veevohealth.com/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Veevo Health</a> <Logo src="/veevohealth.svg" alt="Veevo Health" /></div>
-          <div>↳ Engineering at <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a> <Logo src="/toffee.png" alt="Toffee.ai" /></div>
-          <div>↳ Raised <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">$75k</a> for <a href="https://www.youtube.com/watch?v=R3s4H16X9VA" target="_blank" rel="noreferrer" className="hover-underline-nudge">impoverished school districts</a></div>
+          <div>↳ Co-founder at <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a> <Logo src="/toffee.png" alt="Toffee.ai" /></div>
+          <div>↳ <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">100k</a> revenue in <a href="https://www.youtube.com/watch?v=R3s4H16X9VA" target="_blank" rel="noreferrer" className="hover-underline-nudge">EdTech</a></div>
           <div>↳ Competed in AIME | USAPhO | USACO</div>
           <div>↳ Built <a href="https://github.com/ir272/termshare" target="_blank" rel="noreferrer" className="hover-underline-nudge">TermShare</a>, <a href="https://github.com/ir272/Roybal" target="_blank" rel="noreferrer" className="hover-underline-nudge">Roybal</a>, <a href="https://github.com/ir272/ae-mcp" target="_blank" rel="noreferrer" className="hover-underline-nudge">Adobe After Effects MCP</a>, <a href="https://duels.live" target="_blank" rel="noreferrer" className="hover-underline-nudge">Duel</a>, and other <a href="https://github.com/ir272" target="_blank" rel="noreferrer" className="hover-underline-nudge">cool stuff</a></div>
         </div>
