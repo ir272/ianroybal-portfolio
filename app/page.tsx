@@ -238,7 +238,6 @@ export default function Home() {
           <div>↳ Engineering @ <a href="https://www.pressw.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">PressW</a> <Logo src="/pressw-favicon.ico" alt="PressW" /></div>
           <div>↳ Research @ <a href="https://afarahi.github.io/" target="_blank" rel="noreferrer" className="hover-underline-nudge">UT Austin</a> <Logo src="/ut.png" alt="UT Austin" /></div>
           <div>↳ Engineering @ <a href="https://www.veevohealth.com/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Veevo Health</a> <Logo src="/veevohealth.svg" alt="Veevo Health" /></div>
-          <div>↳ Engineering @ <a href="https://toffee.ai/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Toffee.ai</a> <Logo src="/toffee.png" alt="Toffee.ai" /></div>
           <div>↳ Co-founder @ <a href="https://www.instagram.com/lightbulb_tut/" target="_blank" rel="noreferrer" className="hover-underline-nudge">Lightbulb Tutoring</a> <Logo src="/lbt.png" alt="Lightbulb Tutoring" /></div>
         </div>
 
