@@ -172,6 +172,44 @@ function AboutMeAccordion() {
   );
 }
 
+function StuffBuiltAccordion() {
+  const [isOpen, setIsOpen] = useState(false);
+  const projectLinkClass = "hover-underline-nudge text-blue-600 underline decoration-blue-600 underline-offset-2 hover:text-blue-800 dark:text-blue-400 dark:decoration-blue-400 dark:hover:text-blue-300";
+
+  return (
+    <section className="my-3">
+      <button
+        type="button"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen((open) => !open)}
+        className="flex w-full items-center justify-between rounded-md border border-neutral-200 bg-neutral-50 px-3 py-3 text-left text-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-950 dark:hover:bg-neutral-900"
+      >
+        <span className="font-bold">Stuff I&apos;ve Built</span>
+        <span className="font-medium underline underline-offset-2">{isOpen ? "CLOSE" : "OPEN"}</span>
+      </button>
+
+      {isOpen && (
+        <div className="mt-4 px-1 text-sm leading-snug sm:text-[0.95rem]">
+          <ul className="list-disc space-y-2 pl-5">
+            <li><a href="https://kingdomrush-game-b32kwoqck-ir272s-projects.vercel.app" target="_blank" rel="noreferrer" className={projectLinkClass}>Kingdom Dash</a> - a remake of one of my favorite childhood games</li>
+            <li><a href="http://zoriks-labyrinth.vercel.app/" target="_blank" rel="noreferrer" className={projectLinkClass}>Zorik&apos;s Labyrinth</a> - my personal horror game (jumpscare warning)</li>
+            <li><a href="https://www.exampredictor.co/" target="_blank" rel="noreferrer" className={projectLinkClass}>Exam Predictor</a> - predict your exam before test day</li>
+            <li><a href="https://github.com/ir272/claudecollab" target="_blank" rel="noreferrer" className={projectLinkClass}>Claude Collab</a> - make your Claude multiplayer</li>
+            <li><a href="https://github.com/ir272/codex-hud" target="_blank" rel="noreferrer" className={projectLinkClass}>Codex HUD</a> - HUD plugin for Codex, inspired by Claude-HUD</li>
+            <li><a href="https://github.com/ir272/pressw-engine" target="_blank" rel="noreferrer" className={projectLinkClass}>PressW</a> - my attempt building a personal agent harness</li>
+            <li><a href="https://www.npmjs.com/package/ae-mcp" target="_blank" rel="noreferrer" className={projectLinkClass}>Adobe After Effects MCP</a> - MCP server for Adobe After Effects</li>
+            <li><a href="https://github.com/ir272/siren" target="_blank" rel="noreferrer" className={projectLinkClass}>Siren</a> - security for an agentic internet</li>
+            <li><a href="https://github.com/ir272/ians-music" target="_blank" rel="noreferrer" className={projectLinkClass}>Ian&apos;s Music</a> - all-in-one platform to listen to music from Spotify, YouTube, TikTok, and SoundCloud</li>
+            <li><a href="https://github.com/HarrisonFulford/LP_Petitions/tree/main" target="_blank" rel="noreferrer" className={projectLinkClass}>Petitions</a> - ETH app allowing &quot;petitions&quot; on tokenized asset pools for liquidity providers</li>
+            <li><a href="https://github.com/ir272/termshare" target="_blank" rel="noreferrer" className={projectLinkClass}>TermShare</a> - share your terminal over the web</li>
+            <li><a href="https://duels.live" target="_blank" rel="noreferrer" className={projectLinkClass}>Duel</a> - GamePigeon iOS Message Games with $ Wagers</li>
+          </ul>
+        </div>
+      )}
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <main className="relative">
@@ -189,6 +227,7 @@ export default function Home() {
 
         <AboutMeAccordion />
         <AchievementsAccordion />
+        <StuffBuiltAccordion />
 
         <div className="my-2 border-t border-neutral-200 dark:border-neutral-700" />
 
