@@ -2,11 +2,10 @@ import { ArticleLayout } from '@/components/article-layout'
 
 export const metadata = {
   title: 'Reflecting on 2025',
-  date: '2025-12-15'
+  date: '2025-12-15',
+  private: true
 }
 
-<ArticleLayout title={metadata.title} date={metadata.date}>
-
-TBD
+<ArticleLayout title={metadata.title} date={metadata.date} isPrivate={metadata.private}>
 
 </ArticleLayout>
