@@ -36,14 +36,14 @@ function getArticles(): Article[] {
     const content = fs.readFileSync(mdxPath, 'utf-8');
 
     // Extract metadata from the file
-    const titleMatch = content.match(/title:\s*['"](.+?)['"]/);
-    const dateMatch = content.match(/date:\s*['"](.+?)['"]/);
+    const titleMatch = content.match(/title:\s*(['"])(.+?)\1/);
+    const dateMatch = content.match(/date:\s*(['"])(.+?)\1/);
 
     if (titleMatch && dateMatch) {
       articles.push({
         slug,
-        title: titleMatch[1],
-        date: formatDate(dateMatch[1])
+        title: titleMatch[2],
+        date: formatDate(dateMatch[2])
       });
     }
   }
