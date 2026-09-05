@@ -29,7 +29,7 @@ export function ArticleLayout({ children, title, date, isPrivate = false }: Arti
       <div className="relative z-10 mx-auto max-w-screen-sm px-4 sm:px-0">
         <div className="pt-8 sm:pt-12" />
 
-        <PageHeader currentPage="writing" />
+        <PageHeader currentPage="thoughts" />
 
         {/* Article Header */}
         <div className="mb-8">
@@ -57,10 +57,10 @@ export function ArticleLayout({ children, title, date, isPrivate = false }: Arti
 
         <div className="my-8 border-t border-neutral-200 dark:border-neutral-700" />
 
-        {/* Back to Writing */}
+        {/* Back to Thoughts */}
         <div className="text-sm sm:text-[0.95rem] leading-tight my-6">
-          <Link href="/writing" className="hover-underline-nudge font-extralight">
-            ← Back to writing
+          <Link href="/thoughts" className="hover-underline-nudge font-extralight">
+            ← Back to thoughts
           </Link>
         </div>
 

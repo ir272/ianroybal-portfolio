@@ -11,7 +11,7 @@ const allura = Allura({
 });
 
 interface PageHeaderProps {
-  currentPage?: 'home' | 'writing';
+  currentPage?: 'home' | 'thoughts';
   subtitle?: React.ReactNode;
 }
 
@@ -26,7 +26,7 @@ export function PageHeader({ currentPage, subtitle }: PageHeaderProps) {
           <div className="flex items-baseline gap-2 font-extralight">
             <Link href="/" className={`hover-underline-nudge ${shouldBounce('home') ? 'nav-bounce' : ''}`}>Home</Link>
             <span className="text-neutral-400 dark:text-neutral-600">|</span>
-            <Link href="/writing" className={`hover-underline-nudge ${shouldBounce('writing') ? 'nav-bounce-delayed-1' : ''}`}>Writing</Link>
+            <Link href="/thoughts" className={`hover-underline-nudge ${shouldBounce('thoughts') ? 'nav-bounce-delayed-1' : ''}`}>Thoughts</Link>
           </div>
         </div>
         {subtitle && <div>{subtitle}</div>}
