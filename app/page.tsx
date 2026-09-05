@@ -191,6 +191,8 @@ function StuffBuiltAccordion() {
       {isOpen && (
         <div className="mt-4 px-1 text-sm leading-snug sm:text-[0.95rem]">
           <ul className="list-disc space-y-2 pl-5">
+            <li><a href="https://dojii.app/" target="_blank" rel="noreferrer" className={projectLinkClass}>Dojii</a> - a gamified and playful brain training iOS app</li>
+            <li><a href="https://knomilearning.vercel.app/" target="_blank" rel="noreferrer" className={projectLinkClass}>Knomi Learning</a> - personalized education, starting with an AI tutor teaching children&apos;s math</li>
             <li><a href="https://kingdomrush-game-b32kwoqck-ir272s-projects.vercel.app" target="_blank" rel="noreferrer" className={projectLinkClass}>Kingdom Dash</a> - a remake of one of my favorite childhood games</li>
             <li><a href="http://zoriks-labyrinth.vercel.app/" target="_blank" rel="noreferrer" className={projectLinkClass}>Zorik&apos;s Labyrinth</a> - my personal horror game (jumpscare warning)</li>
             <li><a href="https://www.exampredictor.co/" target="_blank" rel="noreferrer" className={projectLinkClass}>Exam Predictor</a> - predict your exam before test day</li>
