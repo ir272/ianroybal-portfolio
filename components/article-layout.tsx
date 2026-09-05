@@ -8,21 +8,25 @@ import { PageFooter } from "@/components/page-footer";
 interface ArticleLayoutProps {
   children: React.ReactNode;
   title: string;
-  date: string;
+  date?: string;
   isPrivate?: boolean;
 }
 
 export function ArticleLayout({ children, title, date, isPrivate = false }: ArticleLayoutProps) {
   // Format date from YYYY-MM-DD to "Month Day, Year"
   // Parse manually to avoid timezone issues
-  const [year, month, day] = date.split('-').map(Number);
-  const dateObj = new Date(year, month - 1, day);
-  const formattedDate = dateObj.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    timeZone: 'UTC'
-  });
+  // Entries without a date are living documents and show no date
+  let formattedDate: string | null = null;
+  if (date) {
+    const [year, month, day] = date.split('-').map(Number);
+    const dateObj = new Date(year, month - 1, day);
+    formattedDate = dateObj.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'UTC'
+    });
+  }
 
   return (
     <main className="relative">
@@ -36,18 +40,18 @@ export function ArticleLayout({ children, title, date, isPrivate = false }: Arti
           <h1 className="text-2xl sm:text-3xl font-extralight mb-3">
             {title}
           </h1>
-          <div className="text-neutral-500 dark:text-neutral-500 font-extralight text-sm flex items-center gap-2">
-            <span>{formattedDate}</span>
-            {isPrivate && (
-              <>
-                <span aria-hidden="true">·</span>
+          {(formattedDate || isPrivate) && (
+            <div className="text-neutral-500 dark:text-neutral-500 font-extralight text-sm flex items-center gap-2">
+              {formattedDate && <span>{formattedDate}</span>}
+              {formattedDate && isPrivate && <span aria-hidden="true">·</span>}
+              {isPrivate && (
                 <span className="inline-flex items-center gap-1">
                   <Lock className="h-3 w-3" aria-hidden="true" />
                   Private
                 </span>
-              </>
-            )}
-          </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Article Content */}

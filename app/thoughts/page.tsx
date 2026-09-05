@@ -7,7 +7,7 @@ import { PageFooter } from "@/components/page-footer";
 interface Article {
   slug: string;
   title: string;
-  date: string;
+  date: string | null; // ISO date, or null for living entries
 }
 
 /**
@@ -39,20 +39,21 @@ function getArticles(): Article[] {
     const titleMatch = content.match(/title:\s*(['"])(.+?)\1/);
     const dateMatch = content.match(/date:\s*(['"])(.+?)\1/);
 
-    if (titleMatch && dateMatch) {
+    if (titleMatch) {
       articles.push({
         slug,
         title: titleMatch[2],
-        date: formatDate(dateMatch[2])
+        date: dateMatch ? dateMatch[2] : null
       });
     }
   }
 
-  // Sort articles by date (newest first)
+  // Sort: undated (living) entries first, then newest first
   articles.sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateB.getTime() - dateA.getTime();
+    if (!a.date && !b.date) return a.title.localeCompare(b.title);
+    if (!a.date) return -1;
+    if (!b.date) return 1;
+    return b.date.localeCompare(a.date);
   });
 
   return articles;
@@ -73,8 +74,26 @@ function formatDate(dateString: string): string {
   });
 }
 
+function ArticleRow({ article }: { article: Article }) {
+  return (
+    <div className="flex items-baseline justify-between gap-4">
+      <Link
+        href={`/thoughts/${article.slug}`}
+        className="hover-underline-nudge text-sm sm:text-[0.95rem]"
+      >
+        {article.title}
+      </Link>
+      <span className="text-neutral-500 dark:text-neutral-500 font-extralight text-xs sm:text-sm shrink-0">
+        {article.date ? formatDate(article.date) : <span aria-label="Living entry">...</span>}
+      </span>
+    </div>
+  );
+}
+
 export default function Thoughts() {
   const articles = getArticles();
+  const livingArticles = articles.filter((a) => !a.date);
+  const datedArticles = articles.filter((a) => a.date);
   return (
     <main className="relative">
       <div className="relative z-10 mx-auto max-w-screen-sm px-4 sm:px-0">
@@ -82,23 +101,22 @@ export default function Thoughts() {
 
         <PageHeader currentPage="thoughts" />
 
-        {/* Articles List */}
-        <div className="space-y-4">
-          {articles.map((article) => (
-            <div
-              key={article.slug}
-              className="flex items-baseline justify-between gap-4"
-            >
-              <Link
-                href={`/thoughts/${article.slug}`}
-                className="hover-underline-nudge text-sm sm:text-[0.95rem]"
-              >
-                {article.title}
-              </Link>
-              <span className="text-neutral-500 dark:text-neutral-500 font-extralight text-xs sm:text-sm shrink-0">
-                {article.date}
-              </span>
+        {/* Living entries (no date), separated from dated ones by a divider */}
+        {livingArticles.length > 0 && (
+          <>
+            <div className="space-y-4">
+              {livingArticles.map((article) => (
+                <ArticleRow key={article.slug} article={article} />
+              ))}
             </div>
+            <div className="my-4 border-t border-neutral-200 dark:border-neutral-700" />
+          </>
+        )}
+
+        {/* Dated entries */}
+        <div className="space-y-4">
+          {datedArticles.map((article) => (
+            <ArticleRow key={article.slug} article={article} />
           ))}
         </div>
 
