@@ -73,11 +73,12 @@ All pages follow a consistent layout pattern:
 **Routes**:
 - `/` - Home page (`app/page.tsx`): Main bio, achievements, current projects
 - `/projects` - Projects page (`app/projects/page.tsx`): Portfolio projects with tech stack details
-- `/writing` - Writing listing page (`app/writing/page.tsx`): List of all articles with titles and dates
-- `/writing/[slug]` - Individual article page (`app/writing/[slug]/page.tsx`): Full article content rendered from MDX
+- `/thoughts` - Thoughts listing page (`app/thoughts/page.tsx`): List of all entries with titles and dates
+- `/thoughts/[slug]` - Individual entry page (`app/thoughts/[slug]/page.mdx`): MDX content wrapped in `ArticleLayout`
+- `/writing` and `/writing/reflecting-on-2025` - Redirect stubs to the `/thoughts` equivalents (kept for old links)
 
 **Common elements**:
-- Header with navigation (Home | Projects | Writing)
+- Header with navigation (Home | Thoughts)
 - Footer with contact links and theme toggle
 - Logo component for inline brand/company icons
 - Consistent typography and spacing
@@ -105,17 +106,16 @@ Built with Tailwind CSS using custom design tokens.
 Images are stored in `/public` directory:
 - Logo images: Various company/organization logos (e.g., `ut.png`, `toffee.png`, etc.)
 - Project screenshots: `lumina.png`, `cavex.png`, `playa.png`
-- Article images: `/public/writing/[article-slug]/` for images used in writing articles
+- Entry images: `/public/thoughts/[entry-slug]/` for images used in thoughts entries
 
-## Writing Content
+## Thoughts Content
 
-Articles are written in MDX format and stored in `_content/writing/`:
-- Each article is a `.mdx` file (e.g., `example-article.mdx`)
-- Frontmatter includes: `title`, `date`, `description`, and optional `tags`
-- Content uses Markdown syntax with full formatting support
-- Images referenced as `/writing/[article-slug]/image.png`
-- Utility functions in `lib/mdx-utils.ts` handle reading and parsing MDX files
-- Articles are statically generated at build time using `next-mdx-remote`
+Entries are MDX pages stored at `app/thoughts/[slug]/page.mdx`:
+- Each file exports a `metadata` object with `title`, `date` (YYYY-MM-DD), and optional `private: true`
+- Content is wrapped in `<ArticleLayout title={metadata.title} date={metadata.date} isPrivate={metadata.private}>`
+- Private entries show a lock and "Private" label on the date line; the listing page shows no indicator
+- The listing in `app/thoughts/page.tsx` scans the folder and parses `title`/`date` from each file with quote-aware regexes
+- Images referenced as `/thoughts/[slug]/image.png`
 
 ## TypeScript Configuration
 
